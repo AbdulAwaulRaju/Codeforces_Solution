@@ -1,0 +1,74 @@
+/*
+ Problem: Keep It Beautiful(B)
+ Link: https://codeforces.com/problemset/problem/1841/B
+ Rating : 1000
+*/
+
+#include <iostream>
+#include<vector>
+using namespace std;
+void ki_ekta_obostha()
+{
+    int q;
+    cin >> q;
+
+    vector<int> v;
+    bool inc = true;
+
+    while (q--)
+    {
+        int curr;
+        cin >> curr;
+
+        if (inc)
+        {
+            if (v.empty() || v.back() <= curr)
+            {
+                v.push_back(curr);
+                cout << 1;
+            }
+            else if (v[0] >= curr)
+            {
+                v.push_back(curr);
+                cout << 1;
+                inc = false;
+            }
+            else
+            {
+                cout << 0;
+            }
+        }
+        else
+        {
+            if (curr <= v[0] && curr >= v.back())
+            {
+                v.push_back(curr);
+                cout << 1;
+            }
+            else
+            {
+                cout << 0;
+            }
+        }
+    }
+
+    cout << endl;
+
+    // Time Complexity: O(q)
+    // Space Complexity: O(q)
+}
+
+int main()
+{
+     
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    int t;
+     cin >> t;
+     while (t--)
+    ki_ekta_obostha();
+
+
+
+    return 0;
+}
