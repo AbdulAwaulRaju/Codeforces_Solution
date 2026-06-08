@@ -1,0 +1,36 @@
+/*
+ Problem: Odds and Ends(B)
+ Link: https://codeforces.com/contest/849/problem/A
+ Rating : 1000
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+void ki_ekta_obostha()
+{
+     int n;
+     cin >> n;
+     vector<int> v(n);
+     for (auto& u : v){
+        cin >> u;}
+        if (n%2 == 0 || v[0]%2 == 0 || v[n-1]%2 == 0){
+            cout << "NO" << endl;
+         }
+        else  cout << "YES" << endl;
+     }
+
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
+
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+
+    ki_ekta_obostha();
+
+
+
+    return 0;
+}
